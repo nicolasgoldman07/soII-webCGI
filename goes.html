@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP3 - Sistemas Operativos II</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="other-header">
+        <h1>Archivos disponibles de: Goes 16 - AWS</h1>
+    </header>
+
+    <div class="goes-section">
+        <form action="./cgi-bin/goes16.cgi" method="GET">
+            <input type="number" placeholder="Ingrese el DOI" max="365" min="0" name="doi">
+            <input type="number" placeholder="Ingrese el año" max="2020" min="2017" name="anio">
+            <button class="other-btn" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <form action="../main.html">
+            <button class = "other-btn">Back to main</button>
+        </form>
+    </div>
+</body>
+</html>

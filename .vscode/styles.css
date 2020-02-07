@@ -1,0 +1,153 @@
+html {
+    border: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    border: 0px;
+    margin: 0px;
+    background-color: #a4d4ae;
+}
+
+
+.main-header{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    background-color: #e7f0c3;
+    border: 0;
+    align-items: center;
+}
+
+.main-header h1{
+    font-size: 35px;
+}
+
+.main-header h2{
+    font-size: 25px;
+}
+
+.main-header h1, h2 {
+    border: 0px;
+    margin: 0px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.btn-section{
+    border: 0px;
+    margin: 0px;
+    display: flex;
+    height: 100px;
+    background-color: #32afa9;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: auto;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: transparent;
+    padding: 10px 10px;
+    font-weight: bold;
+    color: white;
+    margin: 0px 20px;
+    outline: none;
+    border: solid 2px;
+}
+
+.other-header{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: #e7f0c3;
+    border: 0;
+    align-items: center;
+}
+
+.other-header h1{
+    font-size: 35px;
+}
+
+.other-header h2{
+    font-size: 25px;
+}
+
+.other-header h1, h2 {
+    border: 0px;
+    margin: 0px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.other-section{
+    border: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100px;
+    background-color: #32afa9;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    padding-left: 20px;
+}
+
+.other-section p{
+    font-size: 17px;
+    margin: 10px;
+}
+
+.other-btn{
+    width: auto;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: transparent;
+    padding: 10px 10px;
+    font-weight: bold;
+    color: black;
+    margin: 0px 20px;
+    outline: none;
+    border: solid 2px;
+    margin-top: 20px;
+}
+
+.other-section ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.other-section li{
+    margin: 10px 0;
+}
+
+.goes-section input{
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-width: 200px;
+}
+
+.goes-section{
+    border: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    min-height: 150px;
+    background-color: #32afa9;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.table-goes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
