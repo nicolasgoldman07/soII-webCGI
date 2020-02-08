@@ -4,6 +4,7 @@ CFLAGS=-Werror​ -Wall -pedantic
 all:
 	$(CC) recursos.c -o recursos.cgi
 	$(CC) goes16.c -o goes16.cgi
+	$(CC) modules.c -o modules.cgi
 
 clean:
 	rm *.cgi
