@@ -37,46 +37,55 @@ int main()
 	fclose(fp);
 	//system("rm lsmod.txt");
 
-	int init_size = strlen(buffer);
-	char delim[] = "\n";
-
-	char *ptr = strtok(buffer, delim);
-
-	while(ptr != NULL)
-	{
-		printf("<p>%s<p>\n", ptr);
-		ptr = strtok(NULL, delim);
-	}
-
-	/* This loop will show that there are zeroes in the str after tokenizing 
-	for (int i = 0; i < init_size; i++)
-	{
-		printf("<p>%d</p> ", str[i]); /* Convert the character to integer, in this case
-							            the character's ASCII equivalent 
-	}
-	printf("\n");*/
+    printf("<div class = \"table-container\"><table class = \"table-mods\" ><tr><th>Module</th><th>Size</th><th>Used by</th><th>DaFak?</th></tr>");
 
 
-
-    printf("<table class = \"table-mods\" ><tr><th>Module</th><th>Size</th><th>Used by</th></tr>");
-    printf("<p style = \"margin:0px; height: 0px; border-left: 2px solid;min-width: 1124px; border-right: 2px solid; border-bottom: 2px solid;\"> </p>");
-    printf("</div>\n");
-
+    /* Parseo */
+    char * end_str;
+    char * token;
     
+    token = strtok_r(buffer, "\n", &end_str);
+    token = strtok_r(NULL, "\n", &end_str); // No uso la primer fila
+    
+    int odd = 1;
+    while(token != NULL) {
 
-    // fscanf(cmdfile, "%s %ld %s %s %ld %s %s %ld %s", str1, &memTot, str2, str3, &memFree, str4, str5, &memAv, str6);
-    // printf("<ul> <li> %s %ld %s</li> <li> %s %ld %s</li> <li> %s %ld %s</li></ul>", str1, &memTot, str2, str3, &memFree, str4, str5, &memAv, str6);
-    // pclose(cmdfile);
+        char *end_token;
+        char *token2;
+        token2 = strtok_r(token, " ", &end_token);
+        
+        char line[5000] = {""};
+        int index = 0;
+        int counter = 0;
+        while(token2 != NULL){
+            strcat(line, "<td>");
+            strcat(line, token2);
+            strcat(line, "</td>");
+
+            token2 = strtok_r(NULL, " ", &end_token);
+            index = 2;
+            counter++;
+        }
+
+        if (counter == 3){
+            strcat(line, "<td></td>");
+            counter = 0;
+        } else {
+            counter = 0;
+        }
+        // Evita que se imprima basura al final 
+        if(index > 1){
+            printf("%s", line);
+        }
+
+        printf("</tr>\n");
+        token = strtok_r(NULL, "\n", &end_str);
+
+        odd++;
+    }
+
+    printf("</table></div></body></html>");
+
     return 0; 
-
-
-
-
-
-
-
-
-
-
 
 }

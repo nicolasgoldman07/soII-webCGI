@@ -155,7 +155,8 @@ body {
 .table-mods {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
+    border: 2px solid black;
   }
 
 .table-mods td, .table-mods th {
@@ -174,4 +175,8 @@ body {
     background-color: #4CAF50;
     color: white;
   }
+
+.table-container{
+    margin: 50px 0px 50px 100px;
+}
 

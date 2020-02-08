@@ -1,6 +1,6 @@
 Module                  Size  Used by
-rfcomm                 81920  4
-ccm                    20480  6
+rfcomm                 81920  16
+ccm                    20480  9
 cmac                   16384  1
 bnep                   24576  2
 binfmt_misc            24576  1
@@ -19,7 +19,7 @@ iwlmvm                397312  0
 nouveau              1892352  1
 mac80211              847872  1 iwlmvm
 uvcvideo               94208  0
-i915                 1937408  28
+i915                 1937408  30
 videobuf2_vmalloc      20480  1 uvcvideo
 crct10dif_pclmul       16384  1
 crc32_pclmul           16384  0
@@ -31,7 +31,7 @@ videobuf2_common       49152  2 videobuf2_v4l2,uvcvideo
 asus_wmi               32768  1 asus_nb_wmi
 ghash_clmulni_intel    16384  0
 ttm                   102400  1 nouveau
-aesni_intel           372736  6
+aesni_intel           372736  8
 aes_x86_64             20480  1 aesni_intel
 crypto_simd            16384  1 aesni_intel
 cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
@@ -51,8 +51,8 @@ sparse_keymap          16384  1 asus_wmi
 btbcm                  16384  1 btusb
 drm                   483328  20 drm_kms_helper,i915,ttm,nouveau
 btintel                24576  1 btusb
-snd_hda_intel          49152  8
-bluetooth             573440  33 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+snd_hda_intel          49152  10
+bluetooth             573440  43 btrtl,btintel,btbcm,bnep,btusb,rfcomm
 videodev              208896  3 videobuf2_v4l2,uvcvideo,videobuf2_common
 i2c_algo_bit           16384  2 i915,nouveau
 snd_hda_codec         131072  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
@@ -72,14 +72,14 @@ iwlwifi               348160  1 iwlmvm
 ie31200_edac           16384  0
 sysimgblt              16384  1 drm_kms_helper
 snd_rawmidi            36864  1 snd_seq_midi
-snd_pcm               102400  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_pcm               102400  5 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
 mei_me                 40960  1
 lpc_ich                24576  0
 snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
 snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
 cfg80211              704512  3 iwlmvm,iwlwifi,mac80211
 snd_timer              36864  2 snd_seq,snd_pcm
-snd                    86016  27 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm,snd_rawmidi
+snd                    86016  30 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm,snd_rawmidi
 mei                   102400  3 mei_hdcp,mei_me
 soundcore              16384  1 snd
 mac_hid                16384  0
