@@ -26,7 +26,7 @@ int main()
     formResponse = getenv("QUERY_STRING");
 
         if(formResponse == NULL){
-            printf("<P>Error! Error in passing data from form to script.");
+            printf("<p>Error! Error in passing data from form to script.</p>");
             valid = false;
         } else sscanf(formResponse,"doi=%d&anio=%d", &day, &year);
 

@@ -11,23 +11,25 @@
 
 <body>
     <header class="other-header">
-        <h1>Módulos del sistema</h1>
+        <h1>Agregar módulo:</h1>
     </header>
 
-    <div class="btn-section">
-        <form action="./cgi-bin/modules.cgi">
-            <button class="btn">Ver modulos cargados</button>
+    <div class="btn-section-mod">
+        <form enctype=multipart/form-data method="POST" action="./cgi-bin/newModule.cgi" class="form-mod">
+            <input type=file name=FILENAME size="50" style="margin-bottom: 30px; margin-top: 8px;">
+            <button type="submit">Upload</button>
+          </form>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <form action="../main.html" class="holis">
+            <button class = "other-btn">Back to main</button>
         </form>
-        <form action="./newModule.html">
-            <button class="btn">Cargar módulo</button>
+        <form action="../modules.html">
+            <button class = "other-btn">Back to modules</button>
         </form>
     </div>
 
-    
-    <div style="display: flex; justify-content: center;">
-        <form action="../main.html">
-            <button class = "other-btn">Back to main</button>
-        </form>
-    </div>
+
 </body>
 </html>

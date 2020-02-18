@@ -1,182 +1,245 @@
 html {
-    border: 0px;
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
+border: 0px;
+margin: 0px;
+font-family: 'Roboto', sans-serif;
 }
 body {
-    border: 0px;
-    margin: 0px;
-    background-color: #a4d4ae;
+border: 0px;
+margin: 0px;
+background-color: #a4d4ae;
 }
 
 
 .main-header{
-    display: flex;
-    flex-direction: column;
-    height: 150px;
-    background-color: #e7f0c3;
-    border: 0;
-    align-items: center;
+display: flex;
+flex-direction: column;
+height: 150px;
+background-color: #e7f0c3;
+border: 0;
+align-items: center;
 }
 
 .main-header h1{
-    font-size: 35px;
+font-size: 35px;
 }
 
 .main-header h2{
-    font-size: 25px;
+font-size: 25px;
 }
 
 .main-header h1, h2 {
-    border: 0px;
-    margin: 0px;
-    padding-top: 20px;
-    padding-left: 20px;
+border: 0px;
+margin: 0px;
+padding-top: 20px;
+padding-left: 20px;
 }
 
 .btn-section{
-    border: 0px;
-    margin: 0px;
-    display: flex;
-    height: 100px;
-    background-color: #32afa9;
-    justify-content: center;
-    align-items: center;
+border: 0px;
+margin: 0px;
+display: flex;
+height: 100px;
+background-color: #32afa9;
+justify-content: center;
+align-items: center;
 }
 
 .btn{
-    width: auto;
-    font-size: 15px;
-    border-radius: 15px;
-    background-color: transparent;
-    padding: 10px 10px;
-    font-weight: bold;
-    color: white;
-    margin: 0px 20px;
-    outline: none;
-    border: solid 2px;
+width: 200px;
+font-size: 15px;
+border-radius: 15px;
+background-color: transparent;
+padding: 10px 10px;
+font-weight: bold;
+color: white;
+outline: none;
+border: solid 2px;
+margin-top: 20px;
+margin: 0px 20px;
 }
 
 .other-header{
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    background-color: #e7f0c3;
-    border: 0;
-    align-items: center;
+display: flex;
+flex-direction: column;
+height: 100px;
+background-color: #e7f0c3;
+border: 0;
+align-items: center;
 }
 
 .other-header h1{
-    font-size: 35px;
+font-size: 35px;
 }
 
 .other-header h2{
-    font-size: 25px;
+font-size: 25px;
 }
 
 .other-header h1, h2 {
-    border: 0px;
-    margin: 0px;
-    padding-top: 20px;
-    padding-left: 20px;
+border: 0px;
+margin: 0px;
+padding-top: 20px;
+padding-left: 20px;
 }
 
 .other-section{
-    border: 0px;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 100px;
-    background-color: #32afa9;
-    justify-content: flex-start;
-    align-items: flex-start ;
-    padding-left: 20px;
+border: 0px;
+margin: 0px;
+display: flex;
+flex-direction: column;
+height: auto;
+min-height: 100px;
+background-color: #32afa9;
+justify-content: flex-start;
+align-items: flex-start ;
+padding-left: 20px;
 }
 
 .other-section p{
-    font-size: 17px;
-    margin: 10px;
+font-size: 17px;
+margin: 10px;
 }
 
 .other-btn{
-    width: auto;
-    font-size: 15px;
-    border-radius: 15px;
-    background-color: transparent;
-    padding: 10px 10px;
-    font-weight: bold;
-    color: black;
-    margin: 0px 20px;
-    outline: none;
-    border: solid 2px;
-    margin-top: 20px;
+width: 200px;
+font-size: 15px;
+border-radius: 15px;
+background-color: transparent;
+padding: 10px 10px;
+font-weight: bold;
+color: black;
+margin: 0px 20px;
+outline: none;
+border: solid 2px;
+margin: 0px 20px; 
+margin-top: 20px;  
 }
 
 .other-section ul{
-    margin-top: 5px;
-    margin-bottom: 5px;
+margin-top: 5px;
+margin-bottom: 5px;
 }
 
 .other-section li{
-    margin: 10px 0;
+margin: 10px 0;
 }
 
 .goes-section input{
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    min-width: 200px;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+min-width: 200px;
 }
 
 .goes-section{
-    border: 0px;
-    margin: 0px;
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    min-height: 150px;
-    background-color: #32afa9;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
+border: 0px;
+margin: 0px;
+display: flex;
+flex-direction: row;
+height: auto;
+min-height: 150px;
+background-color: #32afa9;
+justify-content: center;
+align-items: center;
+padding-left: 20px;
 }
 
 .table-goes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 20px;
 }
 
 .table-mods {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-    border: 2px solid black;
-  }
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 80%;
+border: 2px solid black;
+}
 
 .table-mods td, .table-mods th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
+border: 1px solid #ddd;
+padding: 8px;
+}
 
 .table-mods tr:nth-child(even){background-color: #f2f2f2;}
 
 .table-mods tr:hover {background-color: #ddd;}
 
 .table-mods th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-  }
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4CAF50;
+color: white;
+}
 
 .table-container{
-    margin: 50px 0px 50px 100px;
+margin: 50px 0px 50px 100px;
 }
+
+.modules-btn{
+width: auto;
+font-size: 15px;
+border-radius: 15px;
+background-color: transparent;
+padding: 10px 10px;
+font-weight: bold;
+color: black;
+margin: 0px 20px;
+outline: none;
+border: solid 2px;
+margin-top: 0px;
+margin: 0px 20px;
+}
+
+.form-mod{
+width: 500px;
+height: 100px;
+border: 4px dashed #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.form-mod button{
+margin: 0;
+color: #fff;
+background: #16a085;
+border: none;
+width: 450px;
+height: 35px;
+margin-top: -20px;
+margin-left: -4px;
+margin-bottom: 10px;
+border-radius: 4px;
+border-bottom: 4px solid #117A60;
+transition: all .2s ease;
+outline: none;
+}
+
+.form-modrm button:hover{
+background: #149174;
+    color: #0C5645;
+}
+
+.form-mod button:active{
+border:0;
+}
+
+.btn-section-mod{
+border: 0px;
+margin: 0px;
+display: flex;
+background-color: #32afa9;
+justify-content: center;
+align-items: center;
+min-height: 200px;
+}
+
 

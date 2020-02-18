@@ -42,40 +42,40 @@ memset(buff, '\0', 3500);
 printf("<div class = \"other-section\">\n");
 
 //Uptime:
-printf("<p><b>The system uptime is: </b> %d days, %02d:%02d:%02d</p>\n", (uptime / 60 / 60 / 24), (uptime / 60 / 60 % 24), (uptime / 60 % 60), (uptime % 60));
+printf("<p><b>Uptime del sistema: </b> %d days, %02d:%02d:%02d</p>\n", (uptime / 60 / 60 / 24), (uptime / 60 / 60 % 24), (uptime / 60 % 60), (uptime % 60));
 ///////////////////////////////////////////////////////////////
 
 //Actual time:
-printf("<p><b>Actual date and time is: </b> %s</p>\n", today);
+printf("<p><b>Fecha y hora actual: </b> %s</p>\n", today);
 ///////////////////////////////////////////////////////////////
 
 //Memory stats:
-printf("<p><b>Memory Stats: </b></p>\n");
+printf("<p><b>Memoria disponble: </b></p>\n");
 
 char *cmd = "grep Mem /proc/meminfo";
 FILE *cmdfile = popen(cmd, "r");
 char str1[20], str2[20], str3[20], str4[20], str5[20], str6[20];
-long memTot, memFree, memAv;
+char memTot[20], memFree[20], memAv[20];
 
-fscanf(cmdfile, "%s %ld %s %s %ld %s %s %ld %s", str1, &memTot, str2, str3, &memFree, str4, str5, &memAv, str6);
-printf("<ul> <li> %s %ld %s</li> <li> %s %ld %s</li> <li> %s %ld %s</li></ul>", str1, &memTot, str2, str3, &memFree, str4, str5, &memAv, str6);
+fscanf(cmdfile, "%s %s %s %s %s %s %s %s %s", str1, memTot, str2, str3, memFree, str4, str5, memAv, str6);
+printf("<ul> <li> %s %s %s</li> <li> %s %s %s</li> <li> %s %s %s</li></ul>", str1, memTot, str2, str3, memFree, str4, str5, memAv, str6);
 pclose(cmdfile);
 ///////////////////////////////////////////////////////////////
 
 //CPU stats:
-printf("<p><b>CPU Stats: </p></b>\n");
+printf("<p><b>Procesador: </p></b>\n");
 char *cmd2 = "cat /proc/cpuinfo | grep \"model name\"";
 FILE *cmdfile2 = popen(cmd2, "r");
 
-char *cmd3 = "cat /proc/top";
+char *cmd3 = "cat /proc/loadavg";
 FILE *cmdfile3 = popen(cmd3, "r");
 
 char str7[20], str8[20], str9[20], str10[20], str11[20], str12[20], str13[20], str14[20],str15[20];
 fscanf(cmdfile2, "%s %s %s %s %s %s %s %s %s ", str7, str8, str9, str10, str11, str12, str13, str14, str15);
 
 char oneMin[20];
-fscanf(cmdfile3, "%s id,", oneMin); 
-printf("<ul><li>Model Name: %s %s %s %s %s %s %s</li><li>Load Average: %d</li></ul>", str9, str10, str11, str12, str13, str14, str15, oneMin);
+fscanf(cmdfile3, "%s", oneMin); 
+printf("<ul><li>Modelo: %s %s %s %s %s %s %s</li><li>Promedio de carga (promedio de tareas en cola de ejecucion en el ultimo minuto): %s</li></ul>", str9, str10, str11, str12, str13, str14, str15, oneMin);
 
 
 printf("</div>\n");

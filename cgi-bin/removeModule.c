@@ -19,10 +19,16 @@ int main()
     printf("<h1>Modulos cargados en el sistema:</h1>\n");
     printf("</header>\n");
 
+    char * rmcommand;
+    rmcommand = calloc(256, sizeof(char));
+    snprintf(rmcommand, 250, "sudo rmmod hello_module.ko");
+    system(rmcommand);
+	free(rmcommand);
+
     /* system lsmod > lsmod.txt */
     char * command;
     command = calloc(256, sizeof(char));
-	//strcpy(command, "echo nein");
+	strcpy(command, "echo nein");
     snprintf(command, 250, "lsmod > lsmod.txt");
     //printf("<p>%s</p>", command);
 
@@ -47,6 +53,7 @@ int main()
     token = strtok_r(buffer, "\n", &end_str);
     token = strtok_r(NULL, "\n", &end_str); // No uso la primer fila
     
+    int odd = 1;
     while(token != NULL) {
 
         char *end_token;
@@ -80,6 +87,7 @@ int main()
         printf("</tr>\n");
         token = strtok_r(NULL, "\n", &end_str);
 
+        odd++;
     }
 
     printf("</table></div>");
@@ -92,9 +100,6 @@ int main()
     printf("<form action=\"../modules.html\">\n");
     printf("<button class = \"modules-btn\">Back to modules</button>\n");
     printf("</form>\n");
-    printf("<form action=\"./removeModule.cgi\">\n");
-    printf("<button class = \"modules-btn\">Remove hello_module</button>\n");
-    printf("</form>\n");
     printf("</div>");
     
     printf("</body></html>");
@@ -102,3 +107,4 @@ int main()
     return 0; 
 
 }
+
